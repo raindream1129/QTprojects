@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\widget.o
+./release\common.o
+./release\writeLog.o
+./release\readjldata.o
+./release\readhstdt.o
+./release\reportperiod.o
+./release\netconfig.o
+./release\qrc_image.o
+./release\moc_widget.o
+./release\moc_readjldata.o
+./release\moc_readhstdt.o
+./release\moc_reportperiod.o
+./release\moc_netconfig.o
+);

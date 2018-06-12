@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><root>
+   <SetRequest>
+      <AttributeDescriptor Descr=" set gas meter's push scheduler invail">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x6030"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="5aa87f960001003c03"/>
+      </Value>
+  </SetRequest>
+  
+  <SetRequest>
+      <AttributeDescriptor Descr=" set gas meter's push scheduler">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x6030"/>
+      </AttributeDescriptor>
+	   <Value>
+		  <BCD Value="5aa252b50001003c03"/>
+      </Value>
+  </SetRequest>
+  
+   <GetRequest>
+     <AttributeDescriptor Descr="Get gas push scheduler">
+	    <ctrlId Value="0x01"/>
+        <flagId Value="0x6030"/>
+      </AttributeDescriptor>
+  </GetRequest>
+  
+</root>

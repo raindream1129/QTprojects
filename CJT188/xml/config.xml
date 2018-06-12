@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<root>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's LDN">
+	    <ctrlId Value="0x15"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U8 Value="30E2"/>
+    </Value>
+  </SetRequest>
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<root>
+	  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's LDN">
+	    <ctrlId Value="0x15"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="18122004123456"/>
+    </Value>
+  </SetRequest>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's TIME">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0xA015"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="20180122083700"/>
+    </Value>
+  </SetRequest>
+    <SetRequest>
+     <AttributeDescriptor Descr="set gas meter's valve close">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0xA017"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="0x99"/>
+    </Value>
+  </SetRequest>
+  <GetRequest>
+    <AttributeDescriptor Descr="get gas meter's metrological data">
+	  	<ctrlId Value="0x01"/>
+      <flagId Value="0x901F"/>
+    </AttributeDescriptor>
+  </GetRequest>
+</root>

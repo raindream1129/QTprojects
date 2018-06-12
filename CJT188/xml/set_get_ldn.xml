@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<root>
+      <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's LDN invail">
+	    <ctrlId Value="0x15"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value=""/>
+      </Value>
+      </SetRequest>
+	  
+	  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's LDN invail">
+	    <ctrlId Value="0x15"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="a23fdsfsaf"/>
+      </Value>
+      </SetRequest>
+	  
+	  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's LDN">
+	    <ctrlId Value="0x15"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="17110412345687"/>
+      </Value>
+      </SetRequest>
+	  
+	  <GetRequest>
+      <AttributeDescriptor Descr="Get gas meter's LDN">
+	    <ctrlId Value="0x03"/>
+        <flagId Value="0xA018"/>
+      </AttributeDescriptor>
+      </GetRequest>
+</root>

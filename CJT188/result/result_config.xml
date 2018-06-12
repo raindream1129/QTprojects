@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <SetResponse>
+    <Result>
+      <Data Descr="set gas meter's addr">
+        <ResValue Value=""/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </SetResponse>
+  <GetResponse>
+    <Result>
+      <Data Descr="get gas meter's metrological data">
+        <ResValue Value="000000202c000000102c201701041030000030"/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </GetResponse>
+</Root>

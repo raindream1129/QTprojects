@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<root>
+    <SetRequest>
+      <AttributeDescriptor Descr="set invaild balance threshold">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x60A2"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U8 Value="030"/>
+      </Value>
+   </SetRequest>
+   
+    <SetRequest>
+      <AttributeDescriptor Descr="set balance threshold">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x60A2"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U16 Value="00000100"/>
+      </Value>
+   </SetRequest>
+   
+   <GetRequest>
+     <AttributeDescriptor Descr="Get balance threshold">
+	    <ctrlId Value="0x01"/>
+        <flagId Value="0x60A2"/>
+      </AttributeDescriptor>
+  </GetRequest>
+  
+  <SetRequest>
+      <AttributeDescriptor Descr="set balance threshold">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x60A2"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U16 Value="00000010"/>
+      </Value>
+   </SetRequest>
+</root>

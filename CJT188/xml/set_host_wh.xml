@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<root>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas host">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x6040"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U32 Value="8BC2ACD6BE08"/>  
+    </Value>
+  </SetRequest> 
+  <GetRequest>
+      <AttributeDescriptor Descr="get gas host">
+	    <ctrlId Value="0x01"/>
+        <flagId Value="0x6040"/>
+      </AttributeDescriptor>
+  </GetRequest>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas host">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x6040"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <U32 Value="8BC4ACD6BE08"/>  
+    </Value>
+  </SetRequest>
+<!---ＩＰ地址为１６进行转换，端口为４位转换１６进制后再位置调换<BCD Value="8BC4ACD6BE08"/>  --->
+</root>

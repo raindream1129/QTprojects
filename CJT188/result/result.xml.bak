@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <SetResponse>
+    <Result>
+      <Data Descr="set gas meter's valve close">
+        <ResValue Value="00"/>
+      </Data>
+      <DataAccessResult Result="success" Value="0"/>
+    </Result>
+  </SetResponse>
+</Root>

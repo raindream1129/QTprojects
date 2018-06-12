@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+  <GetRequest>
+     <AttributeDescriptor Descr="Get gas valve">
+	    <ctrlId Value="0x01"/>
+        <flagId Value="0x6036"/>
+      </AttributeDescriptor>
+  </GetRequest>
+  <SetRequest>
+     <AttributeDescriptor Descr="clear temper">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0x6081"/>
+      </AttributeDescriptor>
+  </SetRequest>
+
+  
+</root>

@@ -1,0 +1,9 @@
+***set gas meter's LDN invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 15 03 A0 18 00 0E 16 
+***set gas meter's LDN invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 15 03 A0 18 00 0E 16 
+***set gas meter's LDN invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 15 03 A0 18 00 0E 16 

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetConfig</class>
+ <widget class="QWidget" name="NetConfig">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>378</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>351</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="2">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>升级服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="LEIP1"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>应用服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="LEPT2"/>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLineEdit" name="LEPT1"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="LEIP2"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="LEIP3"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>应用服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>升级服务器地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="LEPT3"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>备份服务器地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>应用服务器地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>平台服务器地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="LEIP4"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>平台服务器端口</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="LEPT4"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="NETBTN">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>190</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>LEIP1</tabstop>
+  <tabstop>LEPT1</tabstop>
+  <tabstop>LEIP2</tabstop>
+  <tabstop>LEPT2</tabstop>
+  <tabstop>LEIP3</tabstop>
+  <tabstop>LEPT3</tabstop>
+  <tabstop>LEIP4</tabstop>
+  <tabstop>LEPT4</tabstop>
+  <tabstop>NETBTN</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

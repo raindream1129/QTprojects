@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <GetResponse>
+    <Result>
+      <Data Descr="Get gas valve">
+        <ResValue Value="00"/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </GetResponse>
+  <SetResponse>
+    <Result>
+      <Data Descr="clear temper">
+        <ResValue Value="00"/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </SetResponse>
+</Root>

@@ -1,0 +1,27 @@
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 
+*** set gas meter's push scheduler invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 0C 60 30 00 96 7F A8 5A 01 00 3C 00 03 35 16 

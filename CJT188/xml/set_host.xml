@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas host">
+	    <ctrlId Value="0x57"/>
+        <flagId Value="0x6032"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="B4A933B39A13"/>
+    </Value>
+  </SetRequest>
+  <GetRequest>
+      <AttributeDescriptor Descr="get gas host">
+	    <ctrlId Value="0x52"/>
+        <flagId Value="0x6032"/>
+      </AttributeDescriptor>
+  </GetRequest>
+
+</root>

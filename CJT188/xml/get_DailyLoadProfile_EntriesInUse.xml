@@ -1,0 +1,41 @@
+<ROOT>
+  <GetRequest>
+      <AttributeDescriptor Descr="LDN">
+        <ClassId Value="1"/>
+        <InstanceId OBIS="0-0:42.0.0.255"/>
+        <AttributeId Value="2"/>
+      </AttributeDescriptor>
+  </GetRequest>
+  <GetRequest>
+      <AttributeDescriptor Descr="Offline Management Frame Counter">
+        <ClassId Value="1"/>
+        <InstanceId OBIS="0-1:43.1.1.255"/>
+        <AttributeId Value="2"/>
+      </AttributeDescriptor>
+  </GetRequest>
+
+ <!-- Get Daily Load Profile: entries_in_use & profile_entries --> 
+ 
+  <GetRequest>
+    <GetRequestNormal>
+      <InvokeIdAndPriority Value="C1"/>
+      <AttributeDescriptor Descr="Daily Load Profile - Entries_in_use">
+        <ClassId Value="7"/>
+        <InstanceId OBIS="7-0:99.99.3.255"/>
+        <AttributeId Value="7"/>
+      </AttributeDescriptor>
+    </GetRequestNormal>
+  </GetRequest>
+
+  <GetRequest>
+    <GetRequestNormal>
+      <InvokeIdAndPriority Value="C1"/>
+      <AttributeDescriptor Descr="Daily Load Profile - Profile_entries">
+        <ClassId Value="7"/>
+        <InstanceId OBIS="7-0:99.99.3.255"/>
+        <AttributeId Value="8"/>
+      </AttributeDescriptor>
+    </GetRequestNormal>
+  </GetRequest>  
+
+</ROOT>

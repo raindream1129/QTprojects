@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><root>
+  <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's TIME invail">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0xA015"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="0x5AA34F0B"/>
+    </Value>
+  </SetRequest>
+  
+    <SetRequest>
+      <AttributeDescriptor Descr="set gas meter's TIME">
+	    <ctrlId Value="0x04"/>
+        <flagId Value="0xA015"/>
+      </AttributeDescriptor>
+	  <Value>
+		  <BCD Value="20180306093806"/>
+    </Value>
+  </SetRequest>
+  
+  <GetRequest>
+      <AttributeDescriptor Descr="get gas TIME">
+	    <ctrlId Value="0x01"/>
+        <flagId Value="0xA015"/>
+      </AttributeDescriptor>
+  </GetRequest>
+</root>

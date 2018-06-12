@@ -1,0 +1,15 @@
+***set gas host*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 09 60 40 00 8B BC C2 2A AC CD D6 60 08 8B BE 0E 2C 16 
+***set gas host*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 09 60 40 00 8B BC C2 2A AC CD D6 60 08 8B BE 0E 2C 16 
+***set gas host*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 09 60 40 00 8B BC C2 2A AC CD D6 60 08 8B BE 0E 2C 16 
+***set gas host*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 09 60 40 00 8B BC C2 2A AC CD D6 60 08 8B BE 0E 2C 16 
+***set gas host*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 09 60 40 00 8B BC C2 2A AC CD D6 60 08 8B BE 0E 2C 16 

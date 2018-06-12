@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <SetResponse>
+    <Result>
+      <Data Descr="set gas host">
+        <ResValue Value="5616"/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </SetResponse>
+  <GetResponse>
+    <Result>
+      <Data Descr="get gas host">
+        <ResValue Value="3138302e3136"/>
+      </Data>
+      <DataAccessResult Value="0" Result="success"/>
+    </Result>
+  </GetResponse>
+</Root>

@@ -1,0 +1,3 @@
+***set gas meter's TIME invail*********************************************************
+Tx APDU:
+FE FE 68 30 AA AA AA AA AA AA AA 04 03 A0 15 00 00 00 00 00 00 FA 16 

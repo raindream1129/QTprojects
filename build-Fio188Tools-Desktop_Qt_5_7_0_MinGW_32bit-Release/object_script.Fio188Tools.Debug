@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\widget.o
+./debug\common.o
+./debug\writeLog.o
+./debug\readjldata.o
+./debug\readhstdt.o
+./debug\reportperiod.o
+./debug\netconfig.o
+./debug\qrc_image.o
+./debug\moc_widget.o
+./debug\moc_readjldata.o
+./debug\moc_readhstdt.o
+./debug\moc_reportperiod.o
+./debug\moc_netconfig.o
+);

@@ -30,15 +30,15 @@ public:
     {
         if (totalizer->objectName().isEmpty())
             totalizer->setObjectName(QStringLiteral("totalizer"));
-        totalizer->resize(341, 257);
+        totalizer->resize(305, 132);
         buttonBox = new QDialogButtonBox(totalizer);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(50, 140, 221, 32));
+        buttonBox->setGeometry(QRect(30, 60, 221, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::No|QDialogButtonBox::Yes);
         label = new QLabel(totalizer);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(130, 80, 121, 31));
+        label->setGeometry(QRect(110, 0, 121, 31));
 
         retranslateUi(totalizer);
         QObject::connect(buttonBox, SIGNAL(accepted()), totalizer, SLOT(accept()));
@@ -49,7 +49,7 @@ public:
 
     void retranslateUi(QDialog *totalizer)
     {
-        totalizer->setWindowTitle(QApplication::translate("totalizer", "Dialog", 0));
+        totalizer->setWindowTitle(QApplication::translate("totalizer", "\347\264\257\345\212\240\345\231\250\346\243\200\346\237\245", 0));
         label->setText(QApplication::translate("totalizer", "\347\264\257\347\247\257\351\207\217\346\230\257\345\220\246\346\255\243\347\241\256", 0));
     } // retranslateUi
 

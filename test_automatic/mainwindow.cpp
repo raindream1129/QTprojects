@@ -132,6 +132,7 @@ void MainWindow::TBTimeout()
         logHandler("已恢复出厂参数");
         j=0;
         TimerB->stop();
+        Timer->start(MAX_TIMEOUT_READ);
     }
 
     }
@@ -546,7 +547,7 @@ void MainWindow::meterCmdResponseHandler()
         {
 //            //WriteLog.Result = "success";
             logHandler("手动上报命令成功");
-            Rest();
+            //Rest();
             TimerD->start(90000);
             TimerA->start(20000);
         }
@@ -571,7 +572,8 @@ void MainWindow::meterCmdResponseHandler()
                 TimerC->stop();
                 TimerD->stop();
                 i++;
-                Timer->start(MAX_TIMEOUT_READ);
+                Rest();
+                //Timer->start(MAX_TIMEOUT_READ);
                 logHandler("上报成功");
             }
             else if(cjt188Recv.value == "00")
@@ -1041,6 +1043,7 @@ void MainWindow::TTimeout()
     }
     default:
     {
+
        StopAll();
         QMessageBox::about(this,"提示","测试完成");
         return;

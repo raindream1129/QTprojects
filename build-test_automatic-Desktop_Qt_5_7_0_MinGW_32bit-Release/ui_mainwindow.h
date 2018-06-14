@@ -237,6 +237,8 @@ public:
         AllFlowLE = new QLineEdit(frame);
         AllFlowLE->setObjectName(QStringLiteral("AllFlowLE"));
         AllFlowLE->setEnabled(false);
+        sizePolicy1.setHeightForWidth(AllFlowLE->sizePolicy().hasHeightForWidth());
+        AllFlowLE->setSizePolicy(sizePolicy1);
         AllFlowLE->setStyleSheet(QStringLiteral("background-color: rgb(255, 161, 197);"));
 
         gridLayout->addWidget(AllFlowLE, 0, 6, 1, 1);
@@ -259,7 +261,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\265\213\350\257\225\351\205\215\347\275\256\345\267\245\345\205\267", 0));
         label->setText(QApplication::translate("MainWindow", "\344\270\262\345\217\243", 0));
         Open_Port->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\262\345\217\243", 0));
         Close_Port->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255\344\270\262\345\217\243", 0));

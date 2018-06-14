@@ -76,7 +76,7 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "\346\266\262\346\231\266\346\243\200\346\237\245", 0));
         label_2->setText(QApplication::translate("Dialog", "\350\257\267\347\241\256\350\256\244\350\277\220\350\220\245\345\225\206\345\271\266\345\224\244\351\206\222\344\273\252\350\241\250", 0));
         label->setText(QApplication::translate("Dialog", "\346\266\262\346\231\266\346\230\276\347\244\272\346\230\257\345\220\246\346\255\243\345\270\270", 0));
     } // retranslateUi

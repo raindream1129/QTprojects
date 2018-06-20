@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabW_History">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
@@ -35,68 +35,13 @@
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_2">
-            <item row="1" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <widget class="QDateTimeEdit" name="DTEMonthStart">
-                <property name="dateTime">
-                 <datetime>
-                  <hour>0</hour>
-                  <minute>0</minute>
-                  <second>0</second>
-                  <year>2018</year>
-                  <month>1</month>
-                  <day>1</day>
-                 </datetime>
-                </property>
-                <property name="displayFormat">
-                 <string>yyyy年MM月</string>
-                </property>
-                <property name="calendarPopup">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label">
-              <property name="text">
-               <string>查询的开始时间</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout"/>
             </item>
-            <item row="1" column="2">
+            <item row="0" column="1">
              <widget class="QPushButton" name="MonthBtn">
               <property name="text">
                <string>确定</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>查询的结束时间</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QDateTimeEdit" name="DTEMonthEnd">
-              <property name="dateTime">
-               <datetime>
-                <hour>0</hour>
-                <minute>0</minute>
-                <second>0</second>
-                <year>2018</year>
-                <month>1</month>
-                <day>1</day>
-               </datetime>
-              </property>
-              <property name="displayFormat">
-               <string>yyyy年MM月</string>
-              </property>
-              <property name="calendarPopup">
-               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -160,68 +105,13 @@
          <layout class="QGridLayout" name="gridLayout_7">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_3">
-            <item row="1" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_2">
-              <item>
-               <widget class="QDateTimeEdit" name="DTEDateStart">
-                <property name="dateTime">
-                 <datetime>
-                  <hour>0</hour>
-                  <minute>0</minute>
-                  <second>0</second>
-                  <year>2018</year>
-                  <month>1</month>
-                  <day>1</day>
-                 </datetime>
-                </property>
-                <property name="displayFormat">
-                 <string>yy年MM月dd日</string>
-                </property>
-                <property name="calendarPopup">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_13">
-              <property name="text">
-               <string>查询的开始时间</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout_2"/>
             </item>
-            <item row="1" column="2">
+            <item row="0" column="1">
              <widget class="QPushButton" name="DateBtn">
               <property name="text">
                <string>确定</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_14">
-              <property name="text">
-               <string>查询的结束时间</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QDateTimeEdit" name="DTEDateEnd">
-              <property name="dateTime">
-               <datetime>
-                <hour>0</hour>
-                <minute>0</minute>
-                <second>0</second>
-                <year>2018</year>
-                <month>1</month>
-                <day>1</day>
-               </datetime>
-              </property>
-              <property name="displayFormat">
-               <string>yy年MM月dd日</string>
-              </property>
-              <property name="calendarPopup">
-               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -279,68 +169,13 @@
          <layout class="QGridLayout" name="gridLayout_9">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_4">
-            <item row="1" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QDateTimeEdit" name="DTETimeStart">
-                <property name="dateTime">
-                 <datetime>
-                  <hour>0</hour>
-                  <minute>0</minute>
-                  <second>0</second>
-                  <year>2018</year>
-                  <month>1</month>
-                  <day>1</day>
-                 </datetime>
-                </property>
-                <property name="displayFormat">
-                 <string>MM月dd日HH时</string>
-                </property>
-                <property name="calendarPopup">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_16">
-              <property name="text">
-               <string>查询的开始时间</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout_3"/>
             </item>
-            <item row="1" column="2">
+            <item row="0" column="1">
              <widget class="QPushButton" name="TimeBtn">
               <property name="text">
                <string>确定</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_17">
-              <property name="text">
-               <string>查询的结束时间</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QDateTimeEdit" name="DTETimeEnd">
-              <property name="dateTime">
-               <datetime>
-                <hour>0</hour>
-                <minute>0</minute>
-                <second>0</second>
-                <year>2018</year>
-                <month>1</month>
-                <day>1</day>
-               </datetime>
-              </property>
-              <property name="displayFormat">
-               <string>MM月dd日HH时</string>
-              </property>
-              <property name="calendarPopup">
-               <bool>true</bool>
               </property>
              </widget>
             </item>

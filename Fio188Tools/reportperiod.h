@@ -33,7 +33,7 @@ private slots:
 
     void on_ACC_SAMP_BTN_clicked();
     void on_PushByNetBTN_clicked();
-    void on_TMP_SAMP_BTN_clicked();
+    //void on_TMP_SAMP_BTN_clicked();
 };
 
 #endif // REPORTPERIOD_H

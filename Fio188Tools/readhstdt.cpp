@@ -33,20 +33,85 @@ void ReadHstDt::ReadHstDtResponse(CJT188Obj cjt188obj_t)
     CJT188_FIO_OBJ_ID_HISTORY_TIME_DATA     时
     CJT188_FIO_OBJ_ID_HISTORY_MONTH_DATA    月
     */
+
     if(cjt188obj_t.dataId == CJT188_FIO_OBJ_ID_HISTORY_DATE_DATA)
     {
         YMDFlag = 1;//日
+        qDebug()<<"date";
     }
     else if(cjt188obj_t.dataId == CJT188_FIO_OBJ_ID_HISTORY_TIME_DATA)
     {
+        qDebug()<<"hour";
         YMDFlag = 2;//时
     }
     else if(cjt188obj_t.dataId == CJT188_FIO_OBJ_ID_HISTORY_MONTH_DATA)
     {
+        qDebug()<<"month";
         YMDFlag = 3;//月
     }
     QString Value = cjt188obj_t.value;
-    int RecordNum = Value.mid(0,2).toInt();//记录数
+    //时间
+    QString Time_OneRec_T = Value.mid(0,8);
+    QString s_Out;
+    BigToLittle_Int(Time_OneRec_T,&s_Out);
+    QDateTime time = QDateTime::fromTime_t(s_Out.toInt());//往前推30分钟能保证为前一时间段
+    QString sTime_One;
+    sTime_One.clear();
+    if(YMDFlag == 1)//
+        sTime_One = time.toString("yy年MM月dd日");
+    else if(YMDFlag == 2)
+        sTime_One = time.toString("yy年MM月dd日HH时");
+    else if(YMDFlag == 3)
+        sTime_One = time.toString("yy年MM月dd日");
+    //总量
+    QString Total_Tot = Value.mid(8,8);
+    QString sTotal_Tot_Out;
+    BigToLittle(Total_Tot,&sTotal_Tot_Out);
+    bool ok;
+    int iTotal_Tot = ("0x"+sTotal_Tot_Out).toInt(&ok,0);
+    qDebug()<<iTotal_Tot;
+    //int iTotal_Tot = ("0x"+sTotal_Tot_Out).toInt(&ok,0);
+    /**************************************************
+     * delete by luch--20180319-16.34
+     * 返回数据与协议不符，临时改动
+     * ***********************************************/
+    //Total_Tot = QString::number(((float)iTotal_Tot)/10.0) + "m3";
+    Total_Tot = QString::number(((float)iTotal_Tot)/100.0) + "m3";
+    QString ST = Value.mid(16,8);
+    QString SystemSt = SystemState(ST.toInt());
+    QString sTemp = Value.mid(24,4);
+    QString ssTemp;
+    BigToLittle_Int(sTemp,&ssTemp);
+    float iTemp = ssTemp.toFloat()/10.0;
+    ssTemp = QString::number(iTemp);
+    if(YMDFlag == 3)
+    {//月
+        ui->TBHistMonth->setRowCount(i+1);//总行数增加1
+        ui->TBHistMonth->setItem(i,0,new QTableWidgetItem(sTime_One));
+        ui->TBHistMonth->setItem(i,1,new QTableWidgetItem(Total_Tot));
+        ui->TBHistMonth->setItem(i,2,new QTableWidgetItem(SystemSt));
+        ui->TBHistMonth->setItem(i,3,new QTableWidgetItem(ssTemp));
+    }
+    else if(YMDFlag == 1)
+    {//日
+        ui->TBHistDate->setRowCount(i+1);//总行数增加1
+        ui->TBHistDate->setItem(i,0,new QTableWidgetItem(sTime_One));
+        ui->TBHistDate->setItem(i,1,new QTableWidgetItem(Total_Tot));
+        ui->TBHistDate->setItem(i,2,new QTableWidgetItem(SystemSt));
+        ui->TBHistDate->setItem(i,3,new QTableWidgetItem(ssTemp));
+    }
+    else if(YMDFlag == 2)
+    {//时
+        ui->TBHistTime->setRowCount(i+1);//总行数增加1
+        ui->TBHistTime->setItem(i,0,new QTableWidgetItem(sTime_One));
+        ui->TBHistTime->setItem(i,1,new QTableWidgetItem(Total_Tot));
+        ui->TBHistTime->setItem(i,2,new QTableWidgetItem(SystemSt));
+        ui->TBHistTime->setItem(i,3,new QTableWidgetItem(ssTemp));
+    }
+i++;
+
+#if 0
+    //int RecordNum = Value.mid(0,2).toInt();//记录数
     ui->labelRecordNumMon->setText(tr("记录数:%1").arg(RecordNum));
     QString sRecAll[RecordNum];
     QString ssRecAll = Value.mid(2,Value.length()-2);
@@ -122,7 +187,7 @@ void ReadHstDt::ReadHstDtResponse(CJT188Obj cjt188obj_t)
             ui->TBHistTime->setItem(i,3,new QTableWidgetItem(ssTemp));
         }
     }
-
+#endif
 }
 
 /**************************************
@@ -130,12 +195,14 @@ void ReadHstDt::ReadHstDtResponse(CJT188Obj cjt188obj_t)
  * ***********************************/
 void ReadHstDt::on_MonthBtn_clicked()
 {
+    i = 0;
     CJT188Obj cjt188objtx;
     cjt188objtx.clear();
     cjt188objtx.ctrlId = CJT188_FIO_CTRL_ID_RD_DATA;
-    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HISTORY_MONTH_DATA;//月记录
+    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HST_MONTH_DATA_NO;//月记录条目数
     cjt188objtx.desc = "读月历史记录";
 
+/*
     int DateLength = 0;
     //当前时间
     QDateTime current_date_time =QDateTime::currentDateTime();
@@ -167,7 +234,10 @@ void ReadHstDt::on_MonthBtn_clicked()
         return ;
     }
     cjt188objtx.value = ssTimeStart + ssTimeEnd;
+*/
 
+
+    cjt188objtx.value = "";
     emit ReadHistDt(cjt188objtx);
 }
 
@@ -176,10 +246,11 @@ void ReadHstDt::on_MonthBtn_clicked()
  * **************************************/
 void ReadHstDt::on_DateBtn_clicked()
 {
+    i=0;
     CJT188Obj cjt188objtx;
     cjt188objtx.clear();
     cjt188objtx.ctrlId = CJT188_FIO_CTRL_ID_RD_DATA;
-    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HISTORY_DATE_DATA;//日记录
+    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HST_DATE_DATA_NO;//日记录
     cjt188objtx.desc = "读日历史记录";
     //当前时间
     QDateTime Current_date_time =QDateTime::currentDateTime();
@@ -199,7 +270,7 @@ void ReadHstDt::on_DateBtn_clicked()
         iLastMonth = 12;
     }
 
-
+/*
     QString sTimeStart = ui->DTEDateStart->dateTime().toString("dd");//开始时间--月、日
     QString ssTimeStart = QString("%1").arg(sTimeStart.toInt(),2,16,QLatin1Char('0'));
     int iTimeStart_Month = ui->DTEDateStart->dateTime().date().month();//开始时间--月
@@ -232,7 +303,8 @@ void ReadHstDt::on_DateBtn_clicked()
     }
 
     cjt188objtx.value = ssTimeStart + ssTimeEnd;
-
+*/
+    cjt188objtx.value = "";
     emit ReadHistDt(cjt188objtx);
 }
 
@@ -241,12 +313,13 @@ void ReadHstDt::on_DateBtn_clicked()
  * ****************************************/
 void ReadHstDt::on_TimeBtn_clicked()
 {
+    i=0;
     CJT188Obj cjt188objtx;
     cjt188objtx.clear();
     cjt188objtx.ctrlId = CJT188_FIO_CTRL_ID_RD_DATA;
-    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HISTORY_TIME_DATA;//时记录
+    cjt188objtx.dataId = CJT188_FIO_OBJ_ID_HST_TIME_DATA_NO;//时记录
     cjt188objtx.desc = "读时历史记录";
-
+/*
     //当前时间
     QDateTime Current_date_time =QDateTime::currentDateTime();
     int iCurrent_date_time_T = Current_date_time.toTime_t();//当前时间时间戳
@@ -281,6 +354,8 @@ void ReadHstDt::on_TimeBtn_clicked()
     }
 
     cjt188objtx.value =ssTimeStart + ssTimeEnd;
+    */
+    cjt188objtx.value = "";
     emit ReadHistDt(cjt188objtx);
 }
 

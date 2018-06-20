@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>1634</width>
-    <height>659</height>
+    <height>693</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -498,7 +498,7 @@
          <item row="0" column="0" rowspan="2">
           <widget class="QGroupBox" name="groupBox_2">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -509,35 +509,10 @@
            <layout class="QGridLayout" name="gridLayout_15">
             <item row="0" column="0">
              <layout class="QGridLayout" name="gridLayout_3">
-              <item row="0" column="0">
-               <widget class="QPushButton" name="BtnOpenV">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>微软雅黑</family>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>开阀</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="1">
                <widget class="QPushButton" name="BtnClsV">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -564,40 +539,39 @@
                 </property>
                </widget>
               </item>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="BtnOpenV">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>微软雅黑</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>开阀</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
            </layout>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="label_11">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>自动唤醒时间</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2" rowspan="2">
+         <item row="0" column="1" rowspan="2">
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="1">
-            <widget class="QPushButton" name="Check_Normal_BTN">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>查看异常</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
             <widget class="QPushButton" name="pushButton_3">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -613,7 +587,7 @@
            <item row="1" column="1">
             <widget class="QPushButton" name="Clear_NormalBTN">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -623,43 +597,46 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QPushButton" name="pushButton_5">
+           <item row="0" column="2">
+            <widget class="QPushButton" name="Report_ST_BTN">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="text">
-              <string>确定</string>
+              <string>查看上报状态</string>
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="3">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
-         </item>
-         <item row="1" column="1">
-          <widget class="QDateTimeEdit" name="Wakeup_time_LE">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="dateTime">
-            <datetime>
-             <hour>0</hour>
-             <minute>0</minute>
-             <second>0</second>
-             <year>2018</year>
-             <month>1</month>
-             <day>1</day>
-            </datetime>
-           </property>
-           <property name="calendarPopup">
-            <bool>true</bool>
-           </property>
-          </widget>
          </item>
         </layout>
        </widget>
@@ -794,12 +771,12 @@
           </property>
           <property name="dateTime">
            <datetime>
-            <hour>7</hour>
+            <hour>15</hour>
             <minute>0</minute>
             <second>0</second>
             <year>2017</year>
             <month>12</month>
-            <day>27</day>
+            <day>26</day>
            </datetime>
           </property>
           <property name="displayFormat">
@@ -983,19 +960,6 @@
          <string/>
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_14">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>系统状态</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="7">
           <widget class="QPushButton" name="BtnVth">
            <property name="sizePolicy">
@@ -1044,25 +1008,16 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="SYS_ST_LE">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_14">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(232, 232, 232);</string>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
+           <property name="text">
+            <string>系统状态</string>
            </property>
           </widget>
          </item>
@@ -1079,19 +1034,6 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="5">
-          <widget class="QLabel" name="label_24">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>m3/h</string>
-           </property>
-          </widget>
-         </item>
          <item row="3" column="0">
           <widget class="QLabel" name="label_5">
            <property name="sizePolicy">
@@ -1102,6 +1044,19 @@
            </property>
            <property name="text">
             <string>外电电压</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QLabel" name="label_24">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>m3/h</string>
            </property>
           </widget>
          </item>
@@ -1127,6 +1082,28 @@
            </property>
           </widget>
          </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="SYS_ST_LE">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(232, 232, 232);</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_23">
            <property name="sizePolicy">
@@ -1140,10 +1117,59 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="3">
-          <widget class="QLabel" name="label_4">
+         <item row="2" column="2">
+          <widget class="QPushButton" name="SYS_STATUS_BTN">
            <property name="text">
-            <string>电压阈值</string>
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="6">
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="3">
+          <widget class="QLabel" name="label_45">
+           <property name="text">
+            <string>累加器类型</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="4">
+          <widget class="QComboBox" name="TOTALIZER_STYLE_CB">
+           <item>
+            <property name="text">
+             <string>光电直读</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>干簧管</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="RD_MTRLGC_DATA_BTN">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="7">
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="7">
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="text">
+            <string>设置</string>
            </property>
           </widget>
          </item>
@@ -1170,6 +1196,13 @@
            </property>
            <property name="text">
             <string>mV</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>电压阈值</string>
            </property>
           </widget>
          </item>
@@ -1206,45 +1239,6 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_19">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>设备运行时间</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="7">
-          <widget class="QPushButton" name="MinFlow_BTN">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>设置</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="5">
-          <widget class="QLabel" name="label_25">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>m3/h</string>
-           </property>
-          </widget>
-         </item>
          <item row="4" column="1">
           <widget class="QLineEdit" name="WorkingT_LE">
            <property name="sizePolicy">
@@ -1261,8 +1255,8 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="3">
-          <widget class="QLabel" name="label_35">
+         <item row="3" column="7">
+          <widget class="QPushButton" name="MinFlow_BTN">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -1270,12 +1264,12 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>已闲时长</string>
+            <string>设置</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_17">
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_19">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -1283,7 +1277,20 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>配置版本号</string>
+            <string>设备运行时间</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QLabel" name="label_25">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>m3/h</string>
            </property>
           </widget>
          </item>
@@ -1316,8 +1323,8 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="3">
-          <widget class="QLabel" name="label_21">
+         <item row="4" column="3">
+          <widget class="QLabel" name="label_35">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -1325,17 +1332,20 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>闲置超时</string>
+            <string>已闲时长</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="4">
-          <widget class="QLineEdit" name="IdleT_LE">
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_17">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="text">
+            <string>配置版本号</string>
            </property>
           </widget>
          </item>
@@ -1384,8 +1394,8 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_22">
+         <item row="5" column="3">
+          <widget class="QLabel" name="label_21">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -1393,23 +1403,30 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>温度</string>
+            <string>闲置超时</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="4">
-          <widget class="QLineEdit" name="Alarm_Bal_LE">
+         <item row="5" column="4">
+          <widget class="QLineEdit" name="IdleT_LE">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="styleSheet">
-            <string notr="true"/>
+          </widget>
+         </item>
+         <item row="6" column="7">
+          <widget class="QPushButton" name="AlarmFlow_BTN">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="readOnly">
-            <bool>false</bool>
+           <property name="text">
+            <string>设置</string>
            </property>
           </widget>
          </item>
@@ -1439,21 +1456,24 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="7">
-          <widget class="QPushButton" name="AlarmFlow_BTN">
+         <item row="6" column="4">
+          <widget class="QLineEdit" name="Alarm_Bal_LE">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>设置</string>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_28">
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_22">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -1461,7 +1481,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>连续掉线时长</string>
+            <string>温度</string>
            </property>
           </widget>
          </item>
@@ -1481,19 +1501,16 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="4">
-          <widget class="QLineEdit" name="Alarm_Gas_LE">
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_28">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="readOnly">
-            <bool>false</bool>
+           <property name="text">
+            <string>连续掉线时长</string>
            </property>
           </widget>
          </item>
@@ -1510,16 +1527,19 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="5">
-          <widget class="QLabel" name="label_10">
+         <item row="7" column="4">
+          <widget class="QLineEdit" name="Alarm_Gas_LE">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>m3</string>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -1543,6 +1563,19 @@
            </property>
           </widget>
          </item>
+         <item row="7" column="5">
+          <widget class="QLabel" name="label_10">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>m3</string>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="5">
           <widget class="QLabel" name="label_40">
            <property name="text">
@@ -1557,9 +1590,6 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="4">
-          <widget class="QLineEdit" name="lineEdit"/>
-         </item>
          <item row="8" column="0">
           <widget class="QLabel" name="label_43">
            <property name="text">
@@ -1567,18 +1597,21 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
-          <widget class="QLineEdit" name="lineEdit_2"/>
-         </item>
-         <item row="5" column="2">
-          <widget class="QPushButton" name="RD_FIRMWARE_VERSION_BTN">
+         <item row="6" column="2">
+          <widget class="QPushButton" name="RD_TEMP_BTN">
            <property name="text">
             <string>读取</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="2">
-          <widget class="QPushButton" name="RD_TEMP_BTN">
+         <item row="8" column="4">
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+         <item row="8" column="1">
+          <widget class="QLineEdit" name="lineEdit_2"/>
+         </item>
+         <item row="5" column="2">
+          <widget class="QPushButton" name="RD_FIRMWARE_VERSION_BTN">
            <property name="text">
             <string>读取</string>
            </property>
@@ -1604,13 +1637,6 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="label_13">
-           <property name="text">
-            <string>模式切换</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="Device_timeLE">
            <property name="sizePolicy">
@@ -1624,6 +1650,27 @@
            </property>
            <property name="text">
             <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>模式切换</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QPushButton" name="RD_RUNNIN_TIME_BTN">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QPushButton" name="RD_MIN_FLOW_BTN">
+           <property name="text">
+            <string>读取</string>
            </property>
           </widget>
          </item>
@@ -1657,6 +1704,13 @@
            </item>
           </widget>
          </item>
+         <item row="3" column="2">
+          <widget class="QPushButton" name="RD_EXTERNAL_V">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="7">
           <widget class="QPushButton" name="ModleBTN">
            <property name="sizePolicy">
@@ -1670,22 +1724,8 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="2">
-          <widget class="QPushButton" name="RD_EXTERNAL_V">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QPushButton" name="RD_RUNNIN_TIME_BTN">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="6">
-          <widget class="QPushButton" name="RD_MIN_FLOW_BTN">
+         <item row="4" column="6">
+          <widget class="QPushButton" name="RD_IDLE_TIME_BTN">
            <property name="text">
             <string>读取</string>
            </property>
@@ -1705,13 +1745,6 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="2">
-          <widget class="QPushButton" name="RD_OVERDRAFT_BTN">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
          <item row="5" column="6">
           <widget class="QPushButton" name="RD_ILDE_OVERTIME_BTN">
            <property name="text">
@@ -1719,8 +1752,8 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="6">
-          <widget class="QPushButton" name="RD_IDLE_TIME_BTN">
+         <item row="8" column="2">
+          <widget class="QPushButton" name="RD_OVERDRAFT_BTN">
            <property name="text">
             <string>读取</string>
            </property>
@@ -1733,13 +1766,6 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="6">
-          <widget class="QPushButton" name="RD_REMAINGAS_BTN">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
          <item row="8" column="6">
           <widget class="QPushButton" name="RD_ALARM_BALANCE_BTN">
            <property name="text">
@@ -1747,15 +1773,22 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="6">
-          <widget class="QPushButton" name="RD_MODEL_BTN">
+         <item row="9" column="2">
+          <widget class="QPushButton" name="FIRMWARE_VERSION_BTN">
            <property name="text">
             <string>读取</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="2">
-          <widget class="QPushButton" name="FIRMWARE_VERSION_BTN">
+         <item row="7" column="6">
+          <widget class="QPushButton" name="RD_REMAINGAS_BTN">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QPushButton" name="RD_MODEL_BTN">
            <property name="text">
             <string>读取</string>
            </property>
@@ -1775,59 +1808,34 @@
            </property>
           </widget>
          </item>
-         <item row="9" column="4">
-          <widget class="QComboBox" name="TOTALIZER_STYLE_CB">
-           <item>
-            <property name="text">
-             <string>光电直读</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>干簧管</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="9" column="3">
-          <widget class="QLabel" name="label_45">
-           <property name="text">
-            <string>累加器类型</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="RD_MTRLGC_DATA_BTN">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QPushButton" name="SYS_STATUS_BTN">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="6">
-          <widget class="QPushButton" name="pushButton_6">
-           <property name="text">
-            <string>读取</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="7">
-          <widget class="QPushButton" name="pushButton_7">
+         <item row="10" column="7">
+          <widget class="QPushButton" name="pushButton_5">
            <property name="text">
             <string>设置</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="7">
-          <widget class="QPushButton" name="pushButton_8">
+         <item row="10" column="4">
+          <widget class="QLineEdit" name="ALLOWANCE_PROMPT"/>
+         </item>
+         <item row="10" column="3">
+          <widget class="QLabel" name="label_11">
            <property name="text">
-            <string>设置</string>
+            <string>警示余量</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="6">
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="5">
+          <widget class="QLabel" name="label_46">
+           <property name="text">
+            <string>m3</string>
            </property>
           </widget>
          </item>

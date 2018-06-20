@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -37,11 +36,7 @@ public:
     QGridLayout *gridLayout_5;
     QGridLayout *gridLayout_2;
     QHBoxLayout *horizontalLayout;
-    QDateTimeEdit *DTEMonthStart;
-    QLabel *label;
     QPushButton *MonthBtn;
-    QLabel *label_3;
-    QDateTimeEdit *DTEMonthEnd;
     QLabel *labelRecordNumMon;
     QTableWidget *TBHistMonth;
     QWidget *tab_4;
@@ -50,11 +45,7 @@ public:
     QGridLayout *gridLayout_7;
     QGridLayout *gridLayout_3;
     QHBoxLayout *horizontalLayout_2;
-    QDateTimeEdit *DTEDateStart;
-    QLabel *label_13;
     QPushButton *DateBtn;
-    QLabel *label_14;
-    QDateTimeEdit *DTEDateEnd;
     QLabel *labelRecordNumdate;
     QTableWidget *TBHistDate;
     QWidget *tab_5;
@@ -63,11 +54,7 @@ public:
     QGridLayout *gridLayout_9;
     QGridLayout *gridLayout_4;
     QHBoxLayout *horizontalLayout_3;
-    QDateTimeEdit *DTETimeStart;
-    QLabel *label_16;
     QPushButton *TimeBtn;
-    QLabel *label_17;
-    QDateTimeEdit *DTETimeEnd;
     QLabel *labelRecordNumTime;
     QTableWidget *TBHistTime;
 
@@ -94,37 +81,13 @@ public:
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        DTEMonthStart = new QDateTimeEdit(frame);
-        DTEMonthStart->setObjectName(QStringLiteral("DTEMonthStart"));
-        DTEMonthStart->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTEMonthStart->setCalendarPopup(true);
 
-        horizontalLayout->addWidget(DTEMonthStart);
-
-
-        gridLayout_2->addLayout(horizontalLayout, 1, 0, 1, 1);
-
-        label = new QLabel(frame);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout_2->addWidget(label, 0, 0, 1, 1);
+        gridLayout_2->addLayout(horizontalLayout, 0, 0, 1, 1);
 
         MonthBtn = new QPushButton(frame);
         MonthBtn->setObjectName(QStringLiteral("MonthBtn"));
 
-        gridLayout_2->addWidget(MonthBtn, 1, 2, 1, 1);
-
-        label_3 = new QLabel(frame);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout_2->addWidget(label_3, 0, 1, 1, 1);
-
-        DTEMonthEnd = new QDateTimeEdit(frame);
-        DTEMonthEnd->setObjectName(QStringLiteral("DTEMonthEnd"));
-        DTEMonthEnd->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTEMonthEnd->setCalendarPopup(true);
-
-        gridLayout_2->addWidget(DTEMonthEnd, 1, 1, 1, 1);
+        gridLayout_2->addWidget(MonthBtn, 0, 1, 1, 1);
 
 
         gridLayout_5->addLayout(gridLayout_2, 0, 0, 1, 1);
@@ -169,37 +132,13 @@ public:
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        DTEDateStart = new QDateTimeEdit(frame_2);
-        DTEDateStart->setObjectName(QStringLiteral("DTEDateStart"));
-        DTEDateStart->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTEDateStart->setCalendarPopup(true);
 
-        horizontalLayout_2->addWidget(DTEDateStart);
-
-
-        gridLayout_3->addLayout(horizontalLayout_2, 1, 0, 1, 1);
-
-        label_13 = new QLabel(frame_2);
-        label_13->setObjectName(QStringLiteral("label_13"));
-
-        gridLayout_3->addWidget(label_13, 0, 0, 1, 1);
+        gridLayout_3->addLayout(horizontalLayout_2, 0, 0, 1, 1);
 
         DateBtn = new QPushButton(frame_2);
         DateBtn->setObjectName(QStringLiteral("DateBtn"));
 
-        gridLayout_3->addWidget(DateBtn, 1, 2, 1, 1);
-
-        label_14 = new QLabel(frame_2);
-        label_14->setObjectName(QStringLiteral("label_14"));
-
-        gridLayout_3->addWidget(label_14, 0, 1, 1, 1);
-
-        DTEDateEnd = new QDateTimeEdit(frame_2);
-        DTEDateEnd->setObjectName(QStringLiteral("DTEDateEnd"));
-        DTEDateEnd->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTEDateEnd->setCalendarPopup(true);
-
-        gridLayout_3->addWidget(DTEDateEnd, 1, 1, 1, 1);
+        gridLayout_3->addWidget(DateBtn, 0, 1, 1, 1);
 
 
         gridLayout_7->addLayout(gridLayout_3, 0, 0, 1, 1);
@@ -242,37 +181,13 @@ public:
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        DTETimeStart = new QDateTimeEdit(frame_3);
-        DTETimeStart->setObjectName(QStringLiteral("DTETimeStart"));
-        DTETimeStart->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTETimeStart->setCalendarPopup(true);
 
-        horizontalLayout_3->addWidget(DTETimeStart);
-
-
-        gridLayout_4->addLayout(horizontalLayout_3, 1, 0, 1, 1);
-
-        label_16 = new QLabel(frame_3);
-        label_16->setObjectName(QStringLiteral("label_16"));
-
-        gridLayout_4->addWidget(label_16, 0, 0, 1, 1);
+        gridLayout_4->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
         TimeBtn = new QPushButton(frame_3);
         TimeBtn->setObjectName(QStringLiteral("TimeBtn"));
 
-        gridLayout_4->addWidget(TimeBtn, 1, 2, 1, 1);
-
-        label_17 = new QLabel(frame_3);
-        label_17->setObjectName(QStringLiteral("label_17"));
-
-        gridLayout_4->addWidget(label_17, 0, 1, 1, 1);
-
-        DTETimeEnd = new QDateTimeEdit(frame_3);
-        DTETimeEnd->setObjectName(QStringLiteral("DTETimeEnd"));
-        DTETimeEnd->setDateTime(QDateTime(QDate(2018, 1, 1), QTime(0, 0, 0)));
-        DTETimeEnd->setCalendarPopup(true);
-
-        gridLayout_4->addWidget(DTETimeEnd, 1, 1, 1, 1);
+        gridLayout_4->addWidget(TimeBtn, 0, 1, 1, 1);
 
 
         gridLayout_9->addLayout(gridLayout_4, 0, 0, 1, 1);
@@ -307,7 +222,7 @@ public:
 
         retranslateUi(ReadHstDt);
 
-        tabW_History->setCurrentIndex(0);
+        tabW_History->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(ReadHstDt);
@@ -316,11 +231,7 @@ public:
     void retranslateUi(QWidget *ReadHstDt)
     {
         ReadHstDt->setWindowTitle(QApplication::translate("ReadHstDt", "Form", 0));
-        DTEMonthStart->setDisplayFormat(QApplication::translate("ReadHstDt", "yyyy\345\271\264MM\346\234\210", 0));
-        label->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\345\274\200\345\247\213\346\227\266\351\227\264", 0));
         MonthBtn->setText(QApplication::translate("ReadHstDt", "\347\241\256\345\256\232", 0));
-        label_3->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\347\273\223\346\235\237\346\227\266\351\227\264", 0));
-        DTEMonthEnd->setDisplayFormat(QApplication::translate("ReadHstDt", "yyyy\345\271\264MM\346\234\210", 0));
         labelRecordNumMon->setText(QString());
         QTableWidgetItem *___qtablewidgetitem = TBHistMonth->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ReadHstDt", "\346\227\266\351\227\264", 0));
@@ -331,11 +242,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem3 = TBHistMonth->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("ReadHstDt", "\346\270\251\345\272\246", 0));
         tabW_History->setTabText(tabW_History->indexOf(tab_3), QApplication::translate("ReadHstDt", "\346\234\210\350\256\260\345\275\225", 0));
-        DTEDateStart->setDisplayFormat(QApplication::translate("ReadHstDt", "yy\345\271\264MM\346\234\210dd\346\227\245", 0));
-        label_13->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\345\274\200\345\247\213\346\227\266\351\227\264", 0));
         DateBtn->setText(QApplication::translate("ReadHstDt", "\347\241\256\345\256\232", 0));
-        label_14->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\347\273\223\346\235\237\346\227\266\351\227\264", 0));
-        DTEDateEnd->setDisplayFormat(QApplication::translate("ReadHstDt", "yy\345\271\264MM\346\234\210dd\346\227\245", 0));
         labelRecordNumdate->setText(QString());
         QTableWidgetItem *___qtablewidgetitem4 = TBHistDate->horizontalHeaderItem(0);
         ___qtablewidgetitem4->setText(QApplication::translate("ReadHstDt", "\346\227\266\351\227\264", 0));
@@ -346,11 +253,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem7 = TBHistDate->horizontalHeaderItem(3);
         ___qtablewidgetitem7->setText(QApplication::translate("ReadHstDt", "\346\270\251\345\272\246", 0));
         tabW_History->setTabText(tabW_History->indexOf(tab_4), QApplication::translate("ReadHstDt", "\346\227\245\350\256\260\345\275\225", 0));
-        DTETimeStart->setDisplayFormat(QApplication::translate("ReadHstDt", "MM\346\234\210dd\346\227\245HH\346\227\266", 0));
-        label_16->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\345\274\200\345\247\213\346\227\266\351\227\264", 0));
         TimeBtn->setText(QApplication::translate("ReadHstDt", "\347\241\256\345\256\232", 0));
-        label_17->setText(QApplication::translate("ReadHstDt", "\346\237\245\350\257\242\347\232\204\347\273\223\346\235\237\346\227\266\351\227\264", 0));
-        DTETimeEnd->setDisplayFormat(QApplication::translate("ReadHstDt", "MM\346\234\210dd\346\227\245HH\346\227\266", 0));
         labelRecordNumTime->setText(QString());
         QTableWidgetItem *___qtablewidgetitem8 = TBHistTime->horizontalHeaderItem(0);
         ___qtablewidgetitem8->setText(QApplication::translate("ReadHstDt", "\346\227\266\351\227\264", 0));

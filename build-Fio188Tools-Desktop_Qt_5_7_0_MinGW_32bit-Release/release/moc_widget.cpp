@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Widget_t {
-    QByteArrayData data[61];
-    char stringdata0[1340];
+    QByteArrayData data[64];
+    char stringdata0[1383];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -50,46 +50,49 @@ QT_MOC_LITERAL(17, 263, 17), // "on_BtnVth_clicked"
 QT_MOC_LITERAL(18, 281, 8), // "TTimeout"
 QT_MOC_LITERAL(19, 290, 10), // "TTimeout_A"
 QT_MOC_LITERAL(20, 301, 10), // "TTimeout_B"
-QT_MOC_LITERAL(21, 312, 9), // "Ctime_out"
-QT_MOC_LITERAL(22, 322, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(23, 346, 19), // "on_ModleBTN_clicked"
-QT_MOC_LITERAL(24, 366, 21), // "on_MaxFlowBTN_clicked"
-QT_MOC_LITERAL(25, 388, 22), // "on_MinFlow_BTN_clicked"
-QT_MOC_LITERAL(26, 411, 20), // "on_IdleT_BTN_clicked"
-QT_MOC_LITERAL(27, 432, 23), // "on_pushButton_3_clicked"
-QT_MOC_LITERAL(28, 456, 23), // "on_pushButton_4_clicked"
-QT_MOC_LITERAL(29, 480, 22), // "on_APPSevIPBTN_clicked"
-QT_MOC_LITERAL(30, 503, 23), // "on_BACKSevIPBTN_clicked"
-QT_MOC_LITERAL(31, 527, 23), // "on_BandWidthBTN_clicked"
-QT_MOC_LITERAL(32, 551, 19), // "on_PLMN_BTN_clicked"
-QT_MOC_LITERAL(33, 571, 29), // "on_AvoidPeakClouseBTN_clicked"
-QT_MOC_LITERAL(34, 601, 27), // "on_AvoidPeakOpenBTN_clicked"
-QT_MOC_LITERAL(35, 629, 27), // "on_Check_Normal_BTN_clicked"
-QT_MOC_LITERAL(36, 657, 26), // "on_Clear_NormalBTN_clicked"
-QT_MOC_LITERAL(37, 684, 22), // "on_Balance_BTN_clicked"
-QT_MOC_LITERAL(38, 707, 24), // "on_AlarmFlow_BTN_clicked"
-QT_MOC_LITERAL(39, 732, 23), // "on_pushButton_5_clicked"
-QT_MOC_LITERAL(40, 756, 29), // "on_RD_MTRLGC_DATA_BTN_clicked"
-QT_MOC_LITERAL(41, 786, 24), // "on_RD_EXTERNAL_V_clicked"
-QT_MOC_LITERAL(42, 811, 29), // "on_RD_RUNNIN_TIME_BTN_clicked"
-QT_MOC_LITERAL(43, 841, 34), // "on_RD_FIRMWARE_VERSION_BTN_cl..."
-QT_MOC_LITERAL(44, 876, 22), // "on_RD_TEMP_BTN_clicked"
-QT_MOC_LITERAL(45, 899, 30), // "on_RD_OFFLINE_TIME_BTN_clicked"
-QT_MOC_LITERAL(46, 930, 27), // "on_RD_OVERDRAFT_BTN_clicked"
-QT_MOC_LITERAL(47, 958, 31), // "on_FIRMWARE_VERSION_BTN_clicked"
-QT_MOC_LITERAL(48, 990, 23), // "on_RD_MODEL_BTN_clicked"
-QT_MOC_LITERAL(49, 1014, 27), // "on_RD_THRESHOLD_BTN_clicked"
-QT_MOC_LITERAL(50, 1042, 26), // "on_RD_MAX_FLOW_BTN_clicked"
-QT_MOC_LITERAL(51, 1069, 26), // "on_RD_MIN_FLOW_BTN_clicked"
-QT_MOC_LITERAL(52, 1096, 27), // "on_RD_IDLE_TIME_BTN_clicked"
-QT_MOC_LITERAL(53, 1124, 31), // "on_RD_ILDE_OVERTIME_BTN_clicked"
-QT_MOC_LITERAL(54, 1156, 25), // "on_RD_BALANCE_BTN_clicked"
-QT_MOC_LITERAL(55, 1182, 27), // "on_RD_REMAINGAS_BTN_clicked"
-QT_MOC_LITERAL(56, 1210, 31), // "on_RD_ALARM_BALANCE_BTN_clicked"
-QT_MOC_LITERAL(57, 1242, 25), // "on_SYS_STATUS_BTN_clicked"
-QT_MOC_LITERAL(58, 1268, 23), // "on_pushButton_6_clicked"
-QT_MOC_LITERAL(59, 1292, 23), // "on_pushButton_7_clicked"
-QT_MOC_LITERAL(60, 1316, 23) // "on_pushButton_8_clicked"
+QT_MOC_LITERAL(21, 312, 10), // "TTimeout_C"
+QT_MOC_LITERAL(22, 323, 10), // "TTimeout_D"
+QT_MOC_LITERAL(23, 334, 9), // "Ctime_out"
+QT_MOC_LITERAL(24, 344, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(25, 368, 19), // "on_ModleBTN_clicked"
+QT_MOC_LITERAL(26, 388, 21), // "on_MaxFlowBTN_clicked"
+QT_MOC_LITERAL(27, 410, 22), // "on_MinFlow_BTN_clicked"
+QT_MOC_LITERAL(28, 433, 20), // "on_IdleT_BTN_clicked"
+QT_MOC_LITERAL(29, 454, 23), // "on_pushButton_3_clicked"
+QT_MOC_LITERAL(30, 478, 23), // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(31, 502, 22), // "on_APPSevIPBTN_clicked"
+QT_MOC_LITERAL(32, 525, 23), // "on_BACKSevIPBTN_clicked"
+QT_MOC_LITERAL(33, 549, 23), // "on_BandWidthBTN_clicked"
+QT_MOC_LITERAL(34, 573, 19), // "on_PLMN_BTN_clicked"
+QT_MOC_LITERAL(35, 593, 29), // "on_AvoidPeakClouseBTN_clicked"
+QT_MOC_LITERAL(36, 623, 27), // "on_AvoidPeakOpenBTN_clicked"
+QT_MOC_LITERAL(37, 651, 26), // "on_Clear_NormalBTN_clicked"
+QT_MOC_LITERAL(38, 678, 22), // "on_Balance_BTN_clicked"
+QT_MOC_LITERAL(39, 701, 24), // "on_AlarmFlow_BTN_clicked"
+QT_MOC_LITERAL(40, 726, 29), // "on_RD_MTRLGC_DATA_BTN_clicked"
+QT_MOC_LITERAL(41, 756, 24), // "on_RD_EXTERNAL_V_clicked"
+QT_MOC_LITERAL(42, 781, 29), // "on_RD_RUNNIN_TIME_BTN_clicked"
+QT_MOC_LITERAL(43, 811, 34), // "on_RD_FIRMWARE_VERSION_BTN_cl..."
+QT_MOC_LITERAL(44, 846, 22), // "on_RD_TEMP_BTN_clicked"
+QT_MOC_LITERAL(45, 869, 30), // "on_RD_OFFLINE_TIME_BTN_clicked"
+QT_MOC_LITERAL(46, 900, 27), // "on_RD_OVERDRAFT_BTN_clicked"
+QT_MOC_LITERAL(47, 928, 31), // "on_FIRMWARE_VERSION_BTN_clicked"
+QT_MOC_LITERAL(48, 960, 23), // "on_RD_MODEL_BTN_clicked"
+QT_MOC_LITERAL(49, 984, 27), // "on_RD_THRESHOLD_BTN_clicked"
+QT_MOC_LITERAL(50, 1012, 26), // "on_RD_MAX_FLOW_BTN_clicked"
+QT_MOC_LITERAL(51, 1039, 26), // "on_RD_MIN_FLOW_BTN_clicked"
+QT_MOC_LITERAL(52, 1066, 27), // "on_RD_IDLE_TIME_BTN_clicked"
+QT_MOC_LITERAL(53, 1094, 31), // "on_RD_ILDE_OVERTIME_BTN_clicked"
+QT_MOC_LITERAL(54, 1126, 25), // "on_RD_BALANCE_BTN_clicked"
+QT_MOC_LITERAL(55, 1152, 27), // "on_RD_REMAINGAS_BTN_clicked"
+QT_MOC_LITERAL(56, 1180, 31), // "on_RD_ALARM_BALANCE_BTN_clicked"
+QT_MOC_LITERAL(57, 1212, 25), // "on_SYS_STATUS_BTN_clicked"
+QT_MOC_LITERAL(58, 1238, 23), // "on_pushButton_6_clicked"
+QT_MOC_LITERAL(59, 1262, 23), // "on_pushButton_7_clicked"
+QT_MOC_LITERAL(60, 1286, 23), // "on_pushButton_8_clicked"
+QT_MOC_LITERAL(61, 1310, 24), // "on_Report_ST_BTN_clicked"
+QT_MOC_LITERAL(62, 1335, 23), // "on_pushButton_9_clicked"
+QT_MOC_LITERAL(63, 1359, 23) // "on_pushButton_5_clicked"
 
     },
     "Widget\0ReadData\0\0ReadHstDtR\0CJT188Obj\0"
@@ -100,7 +103,8 @@ QT_MOC_LITERAL(60, 1316, 23) // "on_pushButton_8_clicked"
     "on_pushButton_clicked\0ReadHistoryData\0"
     "on_RdReportPeriodBtn_clicked\0RepTimeSet\0"
     "on_BtnVth_clicked\0TTimeout\0TTimeout_A\0"
-    "TTimeout_B\0Ctime_out\0on_pushButton_2_clicked\0"
+    "TTimeout_B\0TTimeout_C\0TTimeout_D\0"
+    "Ctime_out\0on_pushButton_2_clicked\0"
     "on_ModleBTN_clicked\0on_MaxFlowBTN_clicked\0"
     "on_MinFlow_BTN_clicked\0on_IdleT_BTN_clicked\0"
     "on_pushButton_3_clicked\0on_pushButton_4_clicked\0"
@@ -108,10 +112,8 @@ QT_MOC_LITERAL(60, 1316, 23) // "on_pushButton_8_clicked"
     "on_BandWidthBTN_clicked\0on_PLMN_BTN_clicked\0"
     "on_AvoidPeakClouseBTN_clicked\0"
     "on_AvoidPeakOpenBTN_clicked\0"
-    "on_Check_Normal_BTN_clicked\0"
     "on_Clear_NormalBTN_clicked\0"
     "on_Balance_BTN_clicked\0on_AlarmFlow_BTN_clicked\0"
-    "on_pushButton_5_clicked\0"
     "on_RD_MTRLGC_DATA_BTN_clicked\0"
     "on_RD_EXTERNAL_V_clicked\0"
     "on_RD_RUNNIN_TIME_BTN_clicked\0"
@@ -131,7 +133,9 @@ QT_MOC_LITERAL(60, 1316, 23) // "on_pushButton_8_clicked"
     "on_RD_ALARM_BALANCE_BTN_clicked\0"
     "on_SYS_STATUS_BTN_clicked\0"
     "on_pushButton_6_clicked\0on_pushButton_7_clicked\0"
-    "on_pushButton_8_clicked"
+    "on_pushButton_8_clicked\0"
+    "on_Report_ST_BTN_clicked\0"
+    "on_pushButton_9_clicked\0on_pushButton_5_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -141,7 +145,7 @@ static const uint qt_meta_data_Widget[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      58,   14, // methods
+      61,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -149,66 +153,69 @@ static const uint qt_meta_data_Widget[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  304,    2, 0x06 /* Public */,
-       3,    1,  307,    2, 0x06 /* Public */,
-       5,    2,  310,    2, 0x06 /* Public */,
+       1,    1,  319,    2, 0x06 /* Public */,
+       3,    1,  322,    2, 0x06 /* Public */,
+       5,    2,  325,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,  315,    2, 0x08 /* Private */,
-       7,    0,  316,    2, 0x08 /* Private */,
-       8,    0,  317,    2, 0x08 /* Private */,
-       9,    0,  318,    2, 0x08 /* Private */,
-      10,    0,  319,    2, 0x08 /* Private */,
-      11,    0,  320,    2, 0x08 /* Private */,
-      12,    0,  321,    2, 0x08 /* Private */,
-      13,    0,  322,    2, 0x08 /* Private */,
-      14,    1,  323,    2, 0x08 /* Private */,
-      15,    0,  326,    2, 0x08 /* Private */,
-      16,    1,  327,    2, 0x08 /* Private */,
-      17,    0,  330,    2, 0x08 /* Private */,
-      18,    0,  331,    2, 0x08 /* Private */,
-      19,    0,  332,    2, 0x08 /* Private */,
-      20,    0,  333,    2, 0x08 /* Private */,
-      21,    0,  334,    2, 0x08 /* Private */,
-      22,    0,  335,    2, 0x08 /* Private */,
-      23,    0,  336,    2, 0x08 /* Private */,
-      24,    0,  337,    2, 0x08 /* Private */,
-      25,    0,  338,    2, 0x08 /* Private */,
-      26,    0,  339,    2, 0x08 /* Private */,
-      27,    0,  340,    2, 0x08 /* Private */,
-      28,    0,  341,    2, 0x08 /* Private */,
-      29,    0,  342,    2, 0x08 /* Private */,
-      30,    0,  343,    2, 0x08 /* Private */,
-      31,    0,  344,    2, 0x08 /* Private */,
-      32,    0,  345,    2, 0x08 /* Private */,
-      33,    0,  346,    2, 0x08 /* Private */,
-      34,    0,  347,    2, 0x08 /* Private */,
-      35,    0,  348,    2, 0x08 /* Private */,
-      36,    0,  349,    2, 0x08 /* Private */,
-      37,    0,  350,    2, 0x08 /* Private */,
-      38,    0,  351,    2, 0x08 /* Private */,
-      39,    0,  352,    2, 0x08 /* Private */,
-      40,    0,  353,    2, 0x08 /* Private */,
-      41,    0,  354,    2, 0x08 /* Private */,
-      42,    0,  355,    2, 0x08 /* Private */,
-      43,    0,  356,    2, 0x08 /* Private */,
-      44,    0,  357,    2, 0x08 /* Private */,
-      45,    0,  358,    2, 0x08 /* Private */,
-      46,    0,  359,    2, 0x08 /* Private */,
-      47,    0,  360,    2, 0x08 /* Private */,
-      48,    0,  361,    2, 0x08 /* Private */,
-      49,    0,  362,    2, 0x08 /* Private */,
-      50,    0,  363,    2, 0x08 /* Private */,
-      51,    0,  364,    2, 0x08 /* Private */,
-      52,    0,  365,    2, 0x08 /* Private */,
-      53,    0,  366,    2, 0x08 /* Private */,
-      54,    0,  367,    2, 0x08 /* Private */,
-      55,    0,  368,    2, 0x08 /* Private */,
-      56,    0,  369,    2, 0x08 /* Private */,
-      57,    0,  370,    2, 0x08 /* Private */,
-      58,    0,  371,    2, 0x08 /* Private */,
-      59,    0,  372,    2, 0x08 /* Private */,
-      60,    0,  373,    2, 0x08 /* Private */,
+       6,    0,  330,    2, 0x08 /* Private */,
+       7,    0,  331,    2, 0x08 /* Private */,
+       8,    0,  332,    2, 0x08 /* Private */,
+       9,    0,  333,    2, 0x08 /* Private */,
+      10,    0,  334,    2, 0x08 /* Private */,
+      11,    0,  335,    2, 0x08 /* Private */,
+      12,    0,  336,    2, 0x08 /* Private */,
+      13,    0,  337,    2, 0x08 /* Private */,
+      14,    1,  338,    2, 0x08 /* Private */,
+      15,    0,  341,    2, 0x08 /* Private */,
+      16,    1,  342,    2, 0x08 /* Private */,
+      17,    0,  345,    2, 0x08 /* Private */,
+      18,    0,  346,    2, 0x08 /* Private */,
+      19,    0,  347,    2, 0x08 /* Private */,
+      20,    0,  348,    2, 0x08 /* Private */,
+      21,    0,  349,    2, 0x08 /* Private */,
+      22,    0,  350,    2, 0x08 /* Private */,
+      23,    0,  351,    2, 0x08 /* Private */,
+      24,    0,  352,    2, 0x08 /* Private */,
+      25,    0,  353,    2, 0x08 /* Private */,
+      26,    0,  354,    2, 0x08 /* Private */,
+      27,    0,  355,    2, 0x08 /* Private */,
+      28,    0,  356,    2, 0x08 /* Private */,
+      29,    0,  357,    2, 0x08 /* Private */,
+      30,    0,  358,    2, 0x08 /* Private */,
+      31,    0,  359,    2, 0x08 /* Private */,
+      32,    0,  360,    2, 0x08 /* Private */,
+      33,    0,  361,    2, 0x08 /* Private */,
+      34,    0,  362,    2, 0x08 /* Private */,
+      35,    0,  363,    2, 0x08 /* Private */,
+      36,    0,  364,    2, 0x08 /* Private */,
+      37,    0,  365,    2, 0x08 /* Private */,
+      38,    0,  366,    2, 0x08 /* Private */,
+      39,    0,  367,    2, 0x08 /* Private */,
+      40,    0,  368,    2, 0x08 /* Private */,
+      41,    0,  369,    2, 0x08 /* Private */,
+      42,    0,  370,    2, 0x08 /* Private */,
+      43,    0,  371,    2, 0x08 /* Private */,
+      44,    0,  372,    2, 0x08 /* Private */,
+      45,    0,  373,    2, 0x08 /* Private */,
+      46,    0,  374,    2, 0x08 /* Private */,
+      47,    0,  375,    2, 0x08 /* Private */,
+      48,    0,  376,    2, 0x08 /* Private */,
+      49,    0,  377,    2, 0x08 /* Private */,
+      50,    0,  378,    2, 0x08 /* Private */,
+      51,    0,  379,    2, 0x08 /* Private */,
+      52,    0,  380,    2, 0x08 /* Private */,
+      53,    0,  381,    2, 0x08 /* Private */,
+      54,    0,  382,    2, 0x08 /* Private */,
+      55,    0,  383,    2, 0x08 /* Private */,
+      56,    0,  384,    2, 0x08 /* Private */,
+      57,    0,  385,    2, 0x08 /* Private */,
+      58,    0,  386,    2, 0x08 /* Private */,
+      59,    0,  387,    2, 0x08 /* Private */,
+      60,    0,  388,    2, 0x08 /* Private */,
+      61,    0,  389,    2, 0x08 /* Private */,
+      62,    0,  390,    2, 0x08 /* Private */,
+      63,    0,  391,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    2,
@@ -227,6 +234,9 @@ static const uint qt_meta_data_Widget[] = {
     QMetaType::Void, 0x80000000 | 4,    2,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 4,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -299,25 +309,25 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 15: _t->TTimeout(); break;
         case 16: _t->TTimeout_A(); break;
         case 17: _t->TTimeout_B(); break;
-        case 18: _t->Ctime_out(); break;
-        case 19: _t->on_pushButton_2_clicked(); break;
-        case 20: _t->on_ModleBTN_clicked(); break;
-        case 21: _t->on_MaxFlowBTN_clicked(); break;
-        case 22: _t->on_MinFlow_BTN_clicked(); break;
-        case 23: _t->on_IdleT_BTN_clicked(); break;
-        case 24: _t->on_pushButton_3_clicked(); break;
-        case 25: _t->on_pushButton_4_clicked(); break;
-        case 26: _t->on_APPSevIPBTN_clicked(); break;
-        case 27: _t->on_BACKSevIPBTN_clicked(); break;
-        case 28: _t->on_BandWidthBTN_clicked(); break;
-        case 29: _t->on_PLMN_BTN_clicked(); break;
-        case 30: _t->on_AvoidPeakClouseBTN_clicked(); break;
-        case 31: _t->on_AvoidPeakOpenBTN_clicked(); break;
-        case 32: _t->on_Check_Normal_BTN_clicked(); break;
-        case 33: _t->on_Clear_NormalBTN_clicked(); break;
-        case 34: _t->on_Balance_BTN_clicked(); break;
-        case 35: _t->on_AlarmFlow_BTN_clicked(); break;
-        case 36: _t->on_pushButton_5_clicked(); break;
+        case 18: _t->TTimeout_C(); break;
+        case 19: _t->TTimeout_D(); break;
+        case 20: _t->Ctime_out(); break;
+        case 21: _t->on_pushButton_2_clicked(); break;
+        case 22: _t->on_ModleBTN_clicked(); break;
+        case 23: _t->on_MaxFlowBTN_clicked(); break;
+        case 24: _t->on_MinFlow_BTN_clicked(); break;
+        case 25: _t->on_IdleT_BTN_clicked(); break;
+        case 26: _t->on_pushButton_3_clicked(); break;
+        case 27: _t->on_pushButton_4_clicked(); break;
+        case 28: _t->on_APPSevIPBTN_clicked(); break;
+        case 29: _t->on_BACKSevIPBTN_clicked(); break;
+        case 30: _t->on_BandWidthBTN_clicked(); break;
+        case 31: _t->on_PLMN_BTN_clicked(); break;
+        case 32: _t->on_AvoidPeakClouseBTN_clicked(); break;
+        case 33: _t->on_AvoidPeakOpenBTN_clicked(); break;
+        case 34: _t->on_Clear_NormalBTN_clicked(); break;
+        case 35: _t->on_Balance_BTN_clicked(); break;
+        case 36: _t->on_AlarmFlow_BTN_clicked(); break;
         case 37: _t->on_RD_MTRLGC_DATA_BTN_clicked(); break;
         case 38: _t->on_RD_EXTERNAL_V_clicked(); break;
         case 39: _t->on_RD_RUNNIN_TIME_BTN_clicked(); break;
@@ -339,6 +349,9 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 55: _t->on_pushButton_6_clicked(); break;
         case 56: _t->on_pushButton_7_clicked(); break;
         case 57: _t->on_pushButton_8_clicked(); break;
+        case 58: _t->on_Report_ST_BTN_clicked(); break;
+        case 59: _t->on_pushButton_9_clicked(); break;
+        case 60: _t->on_pushButton_5_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -393,13 +406,13 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 58)
+        if (_id < 61)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 58;
+        _id -= 61;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 58)
+        if (_id < 61)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 58;
+        _id -= 61;
     }
     return _id;
 }

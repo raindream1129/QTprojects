@@ -37,6 +37,7 @@ public:
     void BuiltLogFileExe();
     void CmdExecution();
     void meterCmdResponseHandler();
+    void readReportST();
 
     QSerialPort     *meterCom;
     SerialInfo      meterComInfo;
@@ -97,6 +98,10 @@ private slots:
 
         void TTimeout_B();
 
+        void TTimeout_C();
+
+        void TTimeout_D();
+
         void Ctime_out();
 
         void on_pushButton_2_clicked();
@@ -125,16 +130,11 @@ private slots:
 
         void on_AvoidPeakOpenBTN_clicked();
 
-        void on_Check_Normal_BTN_clicked();
-
         void on_Clear_NormalBTN_clicked();
 
         void on_Balance_BTN_clicked();
 
         void on_AlarmFlow_BTN_clicked();
-
-        void on_pushButton_5_clicked();
-
 
         void on_RD_MTRLGC_DATA_BTN_clicked();
 
@@ -178,6 +178,12 @@ private slots:
 
         void on_pushButton_8_clicked();
 
+        void on_Report_ST_BTN_clicked();
+
+        void on_pushButton_9_clicked();
+
+        void on_pushButton_5_clicked();
+
 signals:
         void ReadData(QString);
 
@@ -193,8 +199,11 @@ private:
     QTimer     *Timer;
     QTimer     *Timer_A;
     QTimer     *Timer_B;
+    QTimer     *Timer_C;
+    QTimer     *Timer_D;
     QTimer     *Ctime;
     int i;
+    int NumOfHst;
 
 
 

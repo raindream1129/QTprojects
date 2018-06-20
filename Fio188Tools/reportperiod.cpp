@@ -37,7 +37,7 @@ void ReportPeriod::ReadRPPd(quint32 dataID,QString value)
         BigToLittle(value.mid(0,8),&sStartT);
         sStartT = "0x" + sStartT;
         bool ok;
-        int StartT = sStartT.toInt(&ok,0);
+        int StartT = sStartT.toInt(&ok,0)-8*60*60;
 
         time = QDateTime::fromTime_t(StartT);
         //ui->StartRpTime->setDateTime(time);//开始时间
@@ -86,13 +86,13 @@ void ReportPeriod::ReadRPPd(quint32 dataID,QString value)
         break;
     }
     //读温度采样参数
-    case CJT188_FIO_OBJ_ID_TEMP_SAMP:
-    {
-        QString UploadCycle;//上传周期
-        BigToLittle_Int(value.mid(0,4),&UploadCycle);
-        ui->lineETmpSmplF->setText(UploadCycle);
-        break;
-    }
+//    case CJT188_FIO_OBJ_ID_TEMP_SAMP:
+//    {
+//        QString UploadCycle;//上传周期
+//        BigToLittle_Int(value.mid(0,4),&UploadCycle);
+//        //ui->lineETmpSmplF->setText(UploadCycle);
+//        break;
+//    }
     default:
         break;
     }
@@ -102,7 +102,7 @@ void ReportPeriod::ReadRPPd(quint32 dataID,QString value)
 void ReportPeriod::on_PushByNetBTN_clicked()
 {
     bool ok = 0;
-    int iStartT = ui->StartRpTime->dateTime().toTime_t();
+    int iStartT = ui->StartRpTime->dateTime().toTime_t()+8*60*60;
 
     QString sTime;
 
@@ -121,8 +121,8 @@ void ReportPeriod::on_PushByNetBTN_clicked()
     }
     if(iTimeOut <360 || iTimeOut%60!=0)
     {
-        QMessageBox::critical(this,"warning","上报超时时间错误[1-60]");
-        return;
+        //QMessageBox::critical(this,"warning","上报超时时间错误[1-60]");
+        //return;
     }
     if(iReT < 1 || iReT > 3)
     {
@@ -179,20 +179,20 @@ void ReportPeriod::on_ACC_SAMP_BTN_clicked()
 }
 
 //温度采样参数设置
-void ReportPeriod::on_TMP_SAMP_BTN_clicked()
-{
+//void ReportPeriod::on_TMP_SAMP_BTN_clicked()
+//{
 
-   QString sTmp_samp = ui->lineETmpSmplF->text();
-   int iTmp_samp = sTmp_samp.toInt();
-   QString ssTmp_samp = QString("%1").arg(iTmp_samp,4,16,QLatin1Char('0'));
-   CJT188Obj cjt188objtx;
-   cjt188objtx.clear();
-   cjt188objtx.ctrlId = CJT188_FIO_CTRL_ID_WR_DATA;
-   cjt188objtx.dataId = CJT188_FIO_OBJ_ID_TEMP_SAMP;
-   cjt188objtx.value = ssTmp_samp;
-   cjt188objtx.desc = "温度采样参数设置";
-   emit RepTimeSet(cjt188objtx);
-}
+//   QString sTmp_samp = ui->lineETmpSmplF->text();
+//   int iTmp_samp = sTmp_samp.toInt();
+//   QString ssTmp_samp = QString("%1").arg(iTmp_samp,4,16,QLatin1Char('0'));
+//   CJT188Obj cjt188objtx;
+//   cjt188objtx.clear();
+//   cjt188objtx.ctrlId = CJT188_FIO_CTRL_ID_WR_DATA;
+//   cjt188objtx.dataId = CJT188_FIO_OBJ_ID_TEMP_SAMP;
+//   cjt188objtx.value = ssTmp_samp;
+//   cjt188objtx.desc = "温度采样参数设置";
+//   emit RepTimeSet(cjt188objtx);
+//}
 
 
 

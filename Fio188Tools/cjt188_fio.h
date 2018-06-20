@@ -37,9 +37,14 @@
 #define CJT188_FIO_OBJ_ID_NONE                  (0x0000)
 #define CJT188_FIO_OBJ_ID_REGISTER              (0x9066)//注册
 #define CJT188_FIO_OBJ_ID_INITIAVE_REPORT       (0x6044)//主动上报
+
+#define CJT188_FIO_OBJ_ID_HST_DATE_DATA_NO      (0xC120)//历史数据(日)
+#define CJT188_FIO_OBJ_ID_HST_TIME_DATA_NO      (0xC121)//历史数据(时)
+#define CJT188_FIO_OBJ_ID_HST_MONTH_DATA_NO     (0xC122)//历史数据(月)
 #define CJT188_FIO_OBJ_ID_HISTORY_DATE_DATA     (0xD120)//历史数据(日)
 #define CJT188_FIO_OBJ_ID_HISTORY_TIME_DATA     (0xD121)//历史数据(时)
 #define CJT188_FIO_OBJ_ID_HISTORY_MONTH_DATA    (0xD122)//历史数据(月)
+
 
 #define CJT188_FIO_OBJ_ID_NET_PUSH              (0x6030)//网络上报
 #define CJT188_FIO_OBJ_ID_SYSTEM_STATE          (0x6031)//系统状态
@@ -84,7 +89,7 @@
 #define CJT188_FIO_OBJ_ID_NB_IOT_ICCID          (0x6052)//
 #define CJT188_FIO_OBJ_ID_NB_IOT_BAND           (0x6053)//BAND
 #define CJT188_FIO_OBJ_ID_NB_IOT_PLMN           (0x6054)//PLMN
-#define CJT188_FIO_OBJ_ID_NB_IOT_SIGNLE         (0x6055)//RSRP/SNR/PCI
+#define CJT188_FIO_OBJ_ID_NB_IOT_REPORT_ST      (0x6055)//上报状态
 #define CJT188_FIO_OBJ_ID_NB_IOT_APN            (0x6056)//APN
 #define CJT188_FIO_OBJ_ID_NB_IOT_AVOID_PEAK     (0x6058)//避峰
 #define CJT188_FIO_OBJ_ID_GET_TEMERATURE        (0x6059)//温度

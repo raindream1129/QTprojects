@@ -42,7 +42,14 @@ Widget::Widget(QWidget *parent) :
     Timer_B = new QTimer(this);
     connect(Timer_B, SIGNAL(timeout()),
             this, SLOT(TTimeout_B()));
+    Timer_C = new QTimer(this);
+    connect(Timer_C, SIGNAL(timeout()),
+            this, SLOT(TTimeout_C()));
+    Timer_D = new QTimer(this);
+    connect(Timer_D, SIGNAL(timeout()),
+            this, SLOT(TTimeout_D()));
     i = 0;
+    NumOfHst = 0;
     //当前时间
     QDateTime Current_date_time =QDateTime::currentDateTime();
     ui->dateTimeEdit->setDateTime(Current_date_time);
@@ -227,6 +234,38 @@ void Widget::meterComSend()
     {
         meterCom->write((char *)meterSendBuff, meterSendBuffLen);
     }
+}
+void Widget::TTimeout_C()
+{
+    readReportST();
+}
+
+void Widget::TTimeout_D()
+{
+    i++;
+    if(i>NumOfHst)
+    {
+        i=0;
+        Timer_D->stop();
+        return;
+    }
+
+    meterRoutine.errCount = 0;
+    meterRoutine.rsp = METER_RSP_NONE;
+    meterRoutine.task = TASK_READ_HISTORY_DATA;
+    //cjt188obj.ctrlId = CJT188_FIO_CTRL_ID_CMD_RD_DATA;
+    if(cjt188obj.dataId == CJT188_FIO_OBJ_ID_HST_DATE_DATA_NO)//日记录条目数
+        cjt188obj.dataId = CJT188_FIO_OBJ_ID_HISTORY_DATE_DATA;//日记录
+    else if(cjt188obj.dataId == CJT188_FIO_OBJ_ID_HST_TIME_DATA_NO)//时
+        cjt188obj.dataId = CJT188_FIO_OBJ_ID_HISTORY_TIME_DATA;
+    else if(cjt188obj.dataId == CJT188_FIO_OBJ_ID_HST_MONTH_DATA_NO)//月
+        cjt188obj.dataId = CJT188_FIO_OBJ_ID_HISTORY_MONTH_DATA;
+    //cjt188obj.dataId = CJT188_FIO_OBJ_ID_HISTORY_DATA;
+    cjt188obj.value = QString("%1").arg(i,2,16,QLatin1Char('0'));
+    //WriteLog.desc = cjt188Tmp.desc;
+    //cjt188obj = cjt188Tmp;
+    BuiltLogFileExe();
+
 }
 
 /*******************************
@@ -569,7 +608,29 @@ void Widget::meterCmdResponseHandler()
         break;
     }
 
-    //读历史数据
+    //读历史数据条数
+    case TASK_READ_HISTORY_DATA_NUMBER:
+    {
+        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
+        {
+            logHandler("读历史数据条目数成功");
+            WriteLog.Result = "success";
+        }
+        else{
+            WriteLog.Result = "fail";
+            logHandler("读历史数据条目数失败");
+            return;
+        }
+
+        NumOfHst = cjt188Recv.value.mid(0,2).toInt();
+        qDebug()<<NumOfHst;
+        i=0;
+        Timer_D->start(800);
+        meterRoutine.rsp = METER_RSP_OK;
+        //emit(ReadHstDtR(cjt188Recv));
+        break;
+    }
+        //读历史数据
     case TASK_READ_HISTORY_DATA:
     {
         if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
@@ -1055,6 +1116,7 @@ void Widget::meterCmdResponseHandler()
 
         if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_WR_DATA_SUCCESS)
         {
+            Timer_C->start(20000);
             WriteLog.Result = "success";
             logHandler("手动上报成功");
         }
@@ -1432,24 +1494,24 @@ void Widget::meterCmdResponseHandler()
         break;
     }
     //读设备启用时间--自动唤醒时间
-    case TASK_READ_DEVICE_WAKEUP_TIME:
-    {
-        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
-        {
-            QString V_In = cjt188Recv.value;
-            QString V_Out;
-            BigToLittle_Int(V_In,&V_Out);
-            ui->Wakeup_time_LE->setDateTime(QDateTime::fromTime_t(V_Out.toInt()));
-            WriteLog.Result = "success";
-            logHandler("读设备启用时间成功");
-        }
-        else{
-            WriteLog.Result = "fail";
-            logHandler("读设备启用时间失败");
-        }
-        break;
+//    case TASK_READ_DEVICE_WAKEUP_TIME:
+//    {
+//        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
+//        {
+//            QString V_In = cjt188Recv.value;
+//            QString V_Out;
+//            BigToLittle_Int(V_In,&V_Out);
+//            ui->Wakeup_time_LE->setDateTime(QDateTime::fromTime_t(V_Out.toInt()));
+//            WriteLog.Result = "success";
+//            logHandler("读设备启用时间成功");
+//        }
+//        else{
+//            WriteLog.Result = "fail";
+//            logHandler("读设备启用时间失败");
+//        }
+//        break;
 
-    }
+//    }
     //设置唤醒时间
     case TASK_WRITE_WAKEUP_TIME:
     {
@@ -1543,7 +1605,7 @@ void Widget::meterCmdResponseHandler()
         }
         else{
             WriteLog.Result = "fail";
-            logHandler("读累加器类型成功");
+            logHandler("读累加器类型失败");
         }
         break;
     }
@@ -1562,6 +1624,78 @@ void Widget::meterCmdResponseHandler()
         break;
 
     }
+        //读上报状态
+    case TASK_READ_NBIOT_REPORT_STATUS:
+    {
+        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
+        {
+            logHandler("读上报状态成功");
+            if(cjt188Recv.value == "00")
+            {
+                logHandler("正在上报");
+                //QMessageBox::about(this,"提示","正在上报,请稍后再试");
+            }
+            else if(cjt188Recv.value == "01")
+            {
+                logHandler("上报成功");
+                Timer_C->stop();
+                QMessageBox::about(this,"提示","上报成功");
+            }
+            else{
+                logHandler("上报失败");
+                Timer_C->stop();
+                QMessageBox::about(this,"提示","上报失败");
+                break;
+            }
+            WriteLog.Result = "success";
+        }
+        else{
+            WriteLog.Result = "fail";
+            logHandler("读上报状态失败");
+        }
+        break;
+    }
+    //读余量警示阈值
+    case TASK_READ_NBIOT_ALLOWANCE_PROMPT:
+    {
+        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_RD_DATA_SUCCESS)
+        {
+            QString sVin = cjt188Recv.value;
+            QString sVout;
+            BigToLittle(sVin,&sVout);
+            bool ok;
+            long bal = ("0x"+sVout).toLongLong(&ok,0);
+            qDebug()<<bal;
+            //BigToLittle_Int(sVin,&sVout);
+            ui->ALLOWANCE_PROMPT->setText(QString::number(bal));
+            WriteLog.Result = "success";
+            logHandler("读警示余量成功");
+        }else {
+            WriteLog.Result = "fail";
+            logHandler("读警示余量失败");
+        }
+        break;
+    }
+    case TASK_WRITE_ALLOWANCE_PROMPT:
+    {
+        if(cjt188Recv.ctrlId == CJT188_FIO_CTRL_ID_WR_DATA_SUCCESS)
+        {
+            WriteLog.Result = "success";
+            logHandler("设置警示余量成功");
+        }
+        else{
+            WriteLog.Result = "fail";
+            logHandler("设置警示余量失败");
+        }
+        break;
+
+        break;
+    }
+
+
+
+
+
     default:
         break;
     }
@@ -1727,7 +1861,7 @@ void Widget::ReadHistoryData(CJT188Obj cjt188Tmp)
 {
     meterRoutine.errCount = 0;
     meterRoutine.rsp = METER_RSP_NONE;
-    meterRoutine.task = TASK_READ_HISTORY_DATA;
+    meterRoutine.task = TASK_READ_HISTORY_DATA_NUMBER;
     //cjt188obj.ctrlId = CJT188_FIO_CTRL_ID_CMD_RD_DATA;
     //cjt188obj.dataId = CJT188_FIO_OBJ_ID_HISTORY_DATA;
     WriteLog.desc = cjt188Tmp.desc;
@@ -2608,23 +2742,23 @@ void Widget::on_AvoidPeakOpenBTN_clicked()
 /*****************************************
  * 查看异常
  * **************************************/
-void Widget::on_Check_Normal_BTN_clicked()
-{
+//void Widget::on_Check_Normal_BTN_clicked()
+//{
 
-    WriteLog.clear();
-    ui->AbnormalST->clear();
-    meterRoutine.errCount = 0;
-    meterRoutine.rsp = METER_RSP_NONE;
-    meterRoutine.task = TASK_READ_CHECK_NORMAL_STATION;
+//    WriteLog.clear();
+//    ui->AbnormalST->clear();
+//    meterRoutine.errCount = 0;
+//    meterRoutine.rsp = METER_RSP_NONE;
+//    meterRoutine.task = TASK_READ_CHECK_NORMAL_STATION;
 
-    cjt188obj.ctrlId = CJT188_CTRL_ID_RD_DATA;
-    cjt188obj.dataId = CJT188_FIO_OBJ_ID_ABNORMAL_STATION;
-    cjt188obj.value = "";
-    WriteLog.desc = "check the gas meter's abnormal station";
-    BuiltLogFileExe();
+//    cjt188obj.ctrlId = CJT188_CTRL_ID_RD_DATA;
+//    cjt188obj.dataId = CJT188_FIO_OBJ_ID_ABNORMAL_STATION;
+//    cjt188obj.value = "";
+//    WriteLog.desc = "check the gas meter's abnormal station";
+//    BuiltLogFileExe();
 
 
-}
+//}
 
 /**************************************
  * 清除异常
@@ -2694,25 +2828,25 @@ void Widget::on_AlarmFlow_BTN_clicked()
     BuiltLogFileExe();
 }
 
-void Widget::on_pushButton_5_clicked()
-{
-    cjt188obj.value.clear();
-    WriteLog.clear();
-    meterRoutine.errCount = 0;
-    meterRoutine.rsp = METER_RSP_NONE;
-    meterRoutine.task = TASK_WRITE_WAKEUP_TIME;
+//void Widget::on_pushButton_5_clicked()
+//{
+//    cjt188obj.value.clear();
+//    WriteLog.clear();
+//    meterRoutine.errCount = 0;
+//    meterRoutine.rsp = METER_RSP_NONE;
+//    meterRoutine.task = TASK_WRITE_WAKEUP_TIME;
 
-    cjt188obj.ctrlId = CJT188_CTRL_ID_WR_DATA;
-    cjt188obj.dataId = CJT188_FIO_OBJ_ID_WAKEUP_TIME;
+//    cjt188obj.ctrlId = CJT188_CTRL_ID_WR_DATA;
+//    cjt188obj.dataId = CJT188_FIO_OBJ_ID_WAKEUP_TIME;
 
-    int Time_t = ui->Wakeup_time_LE->dateTime().toTime_t();
-    QString V_In = QString("%1").arg(Time_t,8,16,QLatin1Char('0'));
-    QString V_Out;
-    BigToLittle(V_In,&V_Out);
-    cjt188obj.value = V_Out;
-    WriteLog.desc = "set the gas meter's wakeup time on factory modle";
-    BuiltLogFileExe();
-}
+//    //int Time_t = ui->Wakeup_time_LE->dateTime().toTime_t();
+//    QString V_In = QString("%1").arg(Time_t,8,16,QLatin1Char('0'));
+//    QString V_Out;
+//    BigToLittle(V_In,&V_Out);
+//    cjt188obj.value = V_Out;
+//    WriteLog.desc = "set the gas meter's wakeup time on factory modle";
+//    BuiltLogFileExe();
+//}
 
 /*******************************************
  * 计量数据
@@ -3037,4 +3171,58 @@ void Widget::on_pushButton_8_clicked()
     WriteLog.desc = "set the gas meter's alarm balance";
     BuiltLogFileExe();
 
+}
+//上报状态
+void Widget::on_Report_ST_BTN_clicked()
+{
+    readReportST();
+}
+
+void Widget::readReportST()
+{
+    WriteLog.clear();
+    cjt188obj.value.clear();
+    meterRoutine.errCount = 0;
+    meterRoutine.rsp = METER_RSP_NONE;
+    meterRoutine.task = TASK_READ_NBIOT_REPORT_STATUS;
+
+    cjt188obj.ctrlId = CJT188_CTRL_ID_RD_DATA;
+    cjt188obj.dataId = CJT188_FIO_OBJ_ID_NB_IOT_REPORT_ST;
+    WriteLog.desc = "get the gas meter's reporting status";
+    BuiltLogFileExe();
+
+}
+
+//读余量不足阈值
+void Widget::on_pushButton_9_clicked()
+{
+    ui->ALLOWANCE_PROMPT->clear();
+    WriteLog.clear();
+    cjt188obj.value.clear();
+    meterRoutine.errCount = 0;
+    meterRoutine.rsp = METER_RSP_NONE;
+    meterRoutine.task = TASK_READ_NBIOT_ALLOWANCE_PROMPT;
+
+    cjt188obj.ctrlId = CJT188_CTRL_ID_RD_DATA;
+    cjt188obj.dataId = CJT188_FIO_OBJ_ID_ALLOWANCE_PROMPT;
+    WriteLog.desc = "get the gas meter's allowance prompt";
+    BuiltLogFileExe();
+}
+
+//设置余量不足阈值
+void Widget::on_pushButton_5_clicked()
+{
+    cjt188obj.value.clear();
+    meterRoutine.errCount = 0;
+    meterRoutine.rsp = METER_RSP_NONE;
+    meterRoutine.task = TASK_WRITE_ALLOWANCE_PROMPT;
+    cjt188obj.ctrlId = CJT188_FIO_CTRL_ID_WR_DATA;
+    cjt188obj.dataId = CJT188_FIO_OBJ_ID_ALLOWANCE_PROMPT;
+    WriteLog.desc = "set the gas meter's allowance prompt";
+
+    QString V_In = ui->ALLOWANCE_PROMPT->text();
+    //QString sV_In = QString("%1").arg(V_In.toLong(NULL,16));
+    QString sV_In = QString("%1").arg(V_In.toInt(),8,16,QLatin1Char('0'));
+    cjt188obj.value = sV_In.right(8);
+    BuiltLogFileExe();
 }
